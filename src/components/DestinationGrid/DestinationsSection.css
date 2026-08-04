@@ -1,0 +1,42 @@
+.destinations-section {
+  padding: var(--space-6) 0;
+}
+
+.dest-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: var(--space-4);
+}
+
+.dest-filters__search {
+  flex: 1 1 240px;
+}
+
+.dest-filters__search,
+.dest-filters__select {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-line);
+  background: var(--color-parchment-light);
+  color: var(--color-pine);
+}
+
+.dest-filters__select {
+  flex: 0 1 auto;
+}
+
+.dest-filters__empty {
+  margin-top: var(--space-4);
+  color: var(--color-pine-soft);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 560px) {
+  .dest-filters__search,
+  .dest-filters__select {
+    flex: 1 1 100%;
+  }
+}

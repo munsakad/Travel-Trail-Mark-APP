@@ -1,0 +1,20 @@
+.error-boundary {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background: var(--color-parchment);
+}
+
+.error-boundary__inner {
+  max-width: 46ch;
+}
+
+.error-boundary__inner h1 {
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  margin-top: var(--space-1);
+}
+
+.error-boundary__detail {
+  margin: var(--space-2) 0 var(--space-3);
+  color: var(--color-pine-soft);
+}
