@@ -1,0 +1,129 @@
+.hero {
+  padding: var(--space-6) 0 var(--space-5);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(198, 138, 50, 0.12), transparent 45%),
+    var(--color-parchment);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.hero__headline {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  margin-top: var(--space-2);
+  max-width: 14ch;
+}
+
+.hero__sub {
+  margin-top: var(--space-3);
+  max-width: 46ch;
+  font-size: 1.08rem;
+  color: var(--color-pine-soft);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.hero__stats {
+  display: flex;
+  gap: var(--space-4);
+  margin: var(--space-5) 0 0;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-line);
+}
+
+.hero__stat dt {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-pine);
+}
+
+.hero__stat dd {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-taupe);
+}
+
+.hero__map {
+  display: flex;
+  justify-content: center;
+}
+
+.route-map {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+.route-map__path {
+  stroke-dasharray: 7 8;
+  stroke-dashoffset: 620;
+  animation: draw-route 2.4s ease-out forwards;
+}
+
+.route-map__pin {
+  opacity: 0;
+  transform-origin: center;
+  animation: pin-in 0.5s ease-out forwards;
+}
+
+.route-map__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--color-taupe);
+}
+
+@keyframes draw-route {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pin-in {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-map__path {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+  .route-map__pin {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__map {
+    order: -1;
+  }
+
+  .route-map {
+    max-width: 260px;
+  }
+
+  .hero__stats {
+    gap: var(--space-3);
+  }
+}

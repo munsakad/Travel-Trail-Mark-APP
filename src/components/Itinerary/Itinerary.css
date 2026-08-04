@@ -1,0 +1,13 @@
+.itinerary {
+  padding: var(--space-6) 0;
+  background: var(--color-parchment-light);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.itinerary__list {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  max-width: 620px;
+}

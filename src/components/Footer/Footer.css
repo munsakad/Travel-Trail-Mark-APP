@@ -1,0 +1,17 @@
+.footer {
+  padding: var(--space-3) 0;
+  background: var(--color-pine);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(243, 236, 221, 0.55);
+}
+
+.footer__coords {
+  font-family: var(--font-mono);
+}

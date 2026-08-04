@@ -1,0 +1,54 @@
+.itin-step {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: var(--space-3);
+}
+
+.itin-step__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itin-step__day {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-parchment-light);
+  background: var(--color-teal);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.itin-step__line {
+  width: 2px;
+  flex: 1;
+  margin-top: 0.4rem;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--color-taupe-light) 0,
+    var(--color-taupe-light) 4px,
+    transparent 4px,
+    transparent 9px
+  );
+}
+
+.itin-step__body {
+  padding-bottom: var(--space-4);
+}
+
+.itin-step__body h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.itin-step__body p {
+  color: var(--color-pine-soft);
+  max-width: 46ch;
+}
+
+@media (max-width: 560px) {
+  .itin-step {
+    grid-template-columns: 80px 1fr;
+  }
+}

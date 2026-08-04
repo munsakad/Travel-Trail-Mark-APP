@@ -1,0 +1,35 @@
+.testimonial {
+  margin: 0;
+  background: var(--color-parchment-light);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.testimonial blockquote {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--color-pine);
+}
+
+.testimonial figcaption {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+}
+
+.testimonial__name {
+  font-weight: 600;
+  color: var(--color-teal);
+}
+
+.testimonial__trip {
+  color: var(--color-taupe);
+  font-family: var(--font-mono);
+}
