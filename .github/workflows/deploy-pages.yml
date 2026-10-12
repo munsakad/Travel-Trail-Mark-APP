@@ -21,9 +21,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
-      - run: npm ci
+      # lockfile can drift from package.json; fall back to a regular install
+      - run: npm ci || npm install --no-audit --no-fund
       - run: npx vite build --base=/${{ github.event.repository.name }}/
       # SPA fallback so deep links like /destinations/:id work on Pages
       - run: cp dist/index.html dist/404.html
